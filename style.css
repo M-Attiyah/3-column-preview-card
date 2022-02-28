@@ -1,0 +1,193 @@
+/* 
+*****************
+    Fonts 
+*****************
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* 
+*****************
+    variables 
+*****************
+*/
+:root {
+    /* Primary */
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Neutral */
+    --trans-white: hsla(0, 0%, 100%, 0.75);
+    --light-gray: hsl(0, 0%, 95%);
+}
+
+
+/* 
+*****************
+    Reset 
+*****************
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+*****************
+    Default 
+*****************
+*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: var(--light-gray);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Typography */
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--light-gray);
+}
+
+p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    color: var(--trans-white);
+}
+
+/* Buttons */
+button {
+    background-color: var(--light-gray);
+    padding: 1rem;
+    border: 2px solid;
+    border-radius: 50rem;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 700;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+/* card */
+#main {
+    width: 70rem;
+    height: 65vh;
+    display: flex;
+    margin: 1rem;
+}
+
+.card {
+    flex: 1;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.card > h2,
+.card > p,
+.card > #btn-wrap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.card > h2 {
+    font-size: 290%;
+}
+    
+.card > p {
+    align-items: flex-start;
+    line-height: 1.7;
+    font-size: 17px;
+}
+    
+.card > #btn-wrap {
+    align-items: flex-end;
+    width: 100%;
+}
+
+.card > #btn-wrap > button {
+    width: 10rem;
+}
+
+
+/* other card class name */
+.c1 {
+    background-color: var(--bright-orange);
+    border-radius: .7rem 0 0 .7rem;
+}
+
+/* button */
+.c1 > #btn-wrap > button {
+    color: var(--bright-orange);
+}
+
+.c2 {
+    background-color: var(--dark-cyan);
+}
+/* button */
+.c2 > #btn-wrap > button {
+    color: var(--dark-cyan);
+}
+
+.c3 {
+    background-color: var(--very-dark-cyan);
+    border-radius: 0 .7rem .7rem 0;
+}
+.c3 > #btn-wrap > button {
+    color: var(--very-dark-cyan);
+}
+
+.card > #btn-wrap > button:hover {
+    background-color: transparent;
+    border-color: var(--light-gray);
+    color: var(--light-gray);
+}
+
+/* Sizes */
+
+/* Disktop */
+@media (max-width: 895px) {
+    #main {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .card {
+        height: 58vh;
+    }
+    .c1 {
+        border-radius: 0.7rem 0 0 0;
+    }
+    .c2 {
+        border-radius: 0 .7rem 0 0;
+    }
+    .c3 {
+        border-radius: 0 0 0.7rem 0.7rem
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 607px) {
+    .c1 {
+        border-radius: 0.7rem 0.7rem 0 0;
+    }
+    .c2 {
+        border-radius: 0;
+    }
+}
+
+
+
